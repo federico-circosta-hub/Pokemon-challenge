@@ -83,7 +83,7 @@ const PokemonDetail = ({
               <CardMedia
                 component="img"
                 sx={{ width: 300 }}
-                image={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonData.id}.png`}
+                image={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonData?.id}.png`}
               />
               <CardContent className="flex flex-col overflow-y-auto">
                 {list.length > 0 ? (
@@ -120,7 +120,7 @@ const PokemonDetail = ({
                         className="w-8 h-8 animate-bounce"
                       />
                       <Typography variant="h3" fontWeight={700} component="div">
-                        {pokemonData.name}
+                        {pokemonData?.name}
                       </Typography>
                     </div>
 
@@ -130,8 +130,8 @@ const PokemonDetail = ({
                       fontWeight={500}
                     >
                       <b>types:</b>{" "}
-                      {pokemonData.types
-                        ?.map((t: any) => t.type?.name)
+                      {pokemonData?.types
+                        ?.map((t: any) => t?.type?.name)
                         .toString()
                         .replace(",", ", ")}
                     </Typography>
@@ -140,14 +140,14 @@ const PokemonDetail = ({
                       fontSize={14}
                       fontWeight={500}
                     >
-                      <b>habitat:</b> {speciesData.habitat?.name}
+                      <b>habitat:</b> {speciesData?.habitat?.name}
                     </Typography>
                     <Typography
                       variant="overline"
                       fontSize={14}
                       fontWeight={500}
                     >
-                      <b>generation:</b> {speciesData.generation?.name}
+                      <b>generation:</b> {speciesData?.generation?.name}
                     </Typography>
                     <Typography
                       sx={{
@@ -165,7 +165,7 @@ const PokemonDetail = ({
                         onClick={(e) => {
                           e.stopPropagation();
                           setList(
-                            pokemonData.moves?.map((m: any) => m.move?.name)
+                            pokemonData?.moves?.map((m: any) => m?.move?.name)
                           );
                         }}
                         size="small"
@@ -183,7 +183,7 @@ const PokemonDetail = ({
                         edge="end"
                         onClick={(e) => {
                           e.stopPropagation();
-                          setList(pokemonData.forms?.map((f: any) => f?.name));
+                          setList(pokemonData?.forms?.map((f: any) => f?.name));
                         }}
                         size="small"
                       >

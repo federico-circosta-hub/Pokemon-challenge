@@ -44,7 +44,14 @@ const PokemonTable = ({
       ) : (
         <List className="w-full">
           {data
-            ?.sort((p) => (p.type.includes(favoritePokemonType) ? -1 : 1))
+            ?.sort((p1, p2) => {
+              const isFavorite1 = p1.type.includes(favoritePokemonType);
+              const isFavorite2 = p2.type.includes(favoritePokemonType);
+              if (isFavorite1 !== isFavorite2) {
+                return isFavorite1 ? -1 : 1;
+              }
+              return p1.name.localeCompare(p2.name);
+            })
             ?.map((pokemon: pokemonListElement, index: number) => (
               <ListItemButton
                 sx={{
