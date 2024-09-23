@@ -15,8 +15,8 @@ This is a React web application that integrates with the PokeAPI to display Pok√
 ### 1. Clone the repository
 
 ```
-git clone https://github.com/your-username/your-repository.git
-cd your-repository
+git clone https://github.com/federico-circosta-hub/Pokemon-challenge.git
+cd Pokemon-challenge
 ```
 
 ### 2. Install dependencies
@@ -53,4 +53,10 @@ It makes use of the Redux library and therefore uses the browser's local storage
 It is however possible to reset the information from the app itself.
 
 Calls are made to the pokeapi api [PokeApi](https://pokeapi.co/docs/v2).
+
+<br/>
+<br/>
+
+**Please note:** <br/>
+this app is designed to be used via PC or laptop, correct responsive viewing on mobile is not supported at the moment.
 
